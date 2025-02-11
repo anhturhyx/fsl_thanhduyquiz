@@ -1,0 +1,186 @@
+/* animal_quiz.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+body {
+    font-family: 'Patrick Hand', serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #FAE3D9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.chat-container, .result-container, .intro-container {
+    width: 80%;
+    max-width: 400px;
+    height: 500px;
+    background: #AFCBFF; /* Soft vintage blue */
+    border-radius: 25px; /* Rounded corners */
+    overflow: hidden;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.intro-container h1 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.intro-container p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.intro-container button {
+    background: #FF92A5; /* Soft pastel pink */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px; /* Rounded button */
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 150px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    font-family: 'Patrick Hand', serif;
+}
+
+.intro-container button:hover {
+    background: #FF7090; /* Slightly darker pink */
+    transform: scale(1.1);
+}
+.result-container h1 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.result-container img {
+    width: 90%;
+    max-width: 320px;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.result-container button {
+    background: #FFDA77;
+    color: #5A3E2B;
+    border: none;
+    padding: 12px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    width: 80%;
+    max-width: 200px;
+    text-align: center;
+    transition: background 0.3s;
+    font-family: 'Patrick Hand', serif;
+}
+
+.result-container button:hover {
+    background: #FFC785;
+}
+
+
+.chat-header {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px;
+    border-bottom: 2px solid #87A8D0;
+}
+
+.chat-box {
+    flex-grow: 1;
+    overflow-y: hidden; 
+    padding: 10px;
+    background-image: url('images/background.gif');
+    background-size: cover;
+    background-position: center;
+    border-radius: 30px;
+}
+
+.message-container {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    border-radius: 30px;
+}
+
+.user-container {
+    justify-content: flex-end;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+    margin-right: 10px;
+}
+
+.user-container .avatar {
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+.message {
+    padding: 12px;
+    border-radius: 30px;
+    max-width: 75%;
+    font-size: 14px;
+    position: relative;
+}
+
+.bot-message {
+    background: #FFD3B5;
+    align-self: flex-start;
+    border-radius: 30px;
+}
+
+.user-message {
+    background: #FFAAA5;
+    align-self: flex-end;
+    text-align: right;
+    border-radius: 30px;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    width: 100%;
+    border-radius: 30px;
+}
+
+.option-btn {
+    background: #FFDA77;
+    color: #5A3E2B;
+    border: none;
+    padding: 12px;
+    margin: 5px 0;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    transition: background 0.3s;
+    font-family: 'Patrick Hand', serif;
+    position: relative;
+}
+
+.option-btn:hover {
+    background: #FFC785;
+}
