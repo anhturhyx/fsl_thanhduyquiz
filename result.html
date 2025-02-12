@@ -1,16 +1,103 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI ĐÂY TA?</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="result-container">
-        <h1>NGƯỜI THƯƠNG CỦA BẠN LÀ</h1>
-        <img id="result-image" src="images/delilah.jpg" alt="Your Date">
-        <button onclick="window.location.href='index.html'">Lại ik</button>
-    </div>
-</body>
-</html>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AI ĐÂY TA?</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            .result-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                max-width: 90%;
+                margin: auto;
+                padding: 20px;
+                overflow: hidden;
+                justify-content: space-between;
+                height: 500px;
+            }
+
+            .button-group {
+                display: flex;
+                justify-content: center;
+                gap: 12px;
+                width: 100%;
+                max-width: 320px;
+                margin-top: auto;
+                padding-bottom: 20px;
+            }
+
+            .button-group button {
+                flex: 1;
+                padding: 5px;
+                font-size: 14px;
+                font-weight: bold;
+                border: none;
+                border-radius: 25px;
+                cursor: pointer;
+                text-align: center;
+                transition: background 0.3s;
+                font-family: 'Patrick Hand', serif;
+                background: #FFDA77;
+                color: #5A3E2B;
+            }
+
+            .button-group button:hover {
+                background: #FFC785;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="result-container">
+            <h1>NGƯỜI THƯƠNG CỦA BẠN LÀ</h1>
+            <div class="image-container">
+                <img id="result-image" src="" alt="Your Date">
+            </div>
+            <div class="button-group">
+                <button onclick="window.location.href='index.html'">Lại ik</button> 
+                <button onclick="window.location.href='donate.html'">Bấm vô đây nà vui lắm</button>
+                <button id="toggle-music">🎧</button>
+                <button id="music-link">Link nhạc</button>
+            </div>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const resultImage = localStorage.getItem("resultImage");
+                if (resultImage) {
+                    document.getElementById("result-image").src = resultImage;
+                }
+                
+                const musicMap = {
+                    "images/delilah.jpg": "https://www.youtube.com/watch?v=oms_nHDALHc",
+                    "images/bethien.jpg": "https://www.youtube.com/watch?v=o6SEe6clwUc&t=29s",
+                    "images/thanhduy.jpg": "https://zingmp3.vn/bai-hat/Khong-Que-Dau-Nha-Thanh-Duy/Z8IB9ZAE.html",
+                    "images/thanhduysicrit.jpg": "https://www.youtube.com/watch?v=U6DEAuk1hs8",
+                    "images/kimanh.jpg": "https://www.youtube.com/watch?v=dNiwdb7lzQk"
+                };
+                
+                const audio = new Audio();
+                const toggleMusicButton = document.getElementById("toggle-music");
+                const musicLinkButton = document.getElementById("music-link");
+                let isPlaying = false;
+    
+                if (resultImage && musicMap[resultImage]) {
+                    audio.src = musicMap[resultImage];
+                    musicLinkButton.onclick = () => window.open(musicMap[resultImage], "_blank");
+                }
+    
+                toggleMusicButton.onclick = () => {
+                    if (isPlaying) {
+                        audio.pause();
+                        toggleMusicButton.textContent = "Play Music";
+                    } else {
+                        audio.play();
+                        toggleMusicButton.textContent = "Stop Music";
+                    }
+                    isPlaying = !isPlaying;
+                };
+            });
+        </script>
+    </body>    
+    </html>
