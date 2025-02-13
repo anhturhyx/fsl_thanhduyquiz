@@ -134,110 +134,125 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const messages = [
-        { text: "*Bạn có một tin nhắn mới từ 'người bạn thân', bây giờ là tối ngày 13/2*", sender: "bot" },
-        { text: "Hello emmmmm", sender: "bot" },
+        { text: "*Valentine đến rùiiiii ~ Cùng FSL chơi một trò chơi nho nhỏ để tìm xem ai trong vũ trụ Thanh Duy sẽ là người thương của bạn dịp Lễ Tình nhân năm nay nhoaaaa ;\
+*", sender: "bot" },
+        { text: "Ting ting. Hãy cùng chúng mình trả lời những câu hỏi sau để tìm ra đáp án cuối cùng nhó ^3^", sender: "bot" },
         { 
-            text: "Em ăn gì chưa?", 
+            text: "Với bạn, thế nào là một tình yêu lý tưởng?", 
             sender: "bot", 
             options: [
-                { choice: "Em chưaaaa", response: [
-                    { text: "Ơ sao dị", sender: "bot" },
-                    { text: "Em ăn gì anh mua cho nè", sender: "bot" },
-                    { text: "Xíu nữa em ăn nèee", sender: "user" }
-                ], images: ["bethien"] },
-                { choice: "Em đi chơi chưa dề", response: [{ text: "Hừm...", sender: "bot" }], images: ["delilah","thanhduysicrit"] },
-                { choice: "Dạ mới ăn rùi", response: [{ text: "Giỏi quá ta", sender: "bot" }], images: ["thanhduy"] },
-                { choice: "Hỡi ơi cái nghĩa kim bằng mi chỉ đáng là trái cà thiu và một tô cơm hẩm", response: [{ text: "Há há há", sender: "bot" }], images: ["kimanh"] }
+                { choice: "Những rung động trong khoảnh khắc, đôi khi chỉ cần một ánh nhìn trìu mến ", images: ["thanhduy"] },
+                { choice: "Lòng tôi bối tối chân tôi đứng ngồi không yên, lơ ngơ giống một tên điên say mê giấc mơ giấc mộng", images: ["kimanh"] },
+                { choice: "Một bến đỗ bình yên, một người khiến mình cảm thấy an toàn và dễ chịu", images: ["bethien"]},
+                { choice: "Là [tên người đó]", images: ["thanhduysicrit"] },
+                { choice: "Những trải nghiệm thú vị, làm những điều mới mẻ, cùng nhau khám phá cuộc sống này ", images: ["delilah"] }
             ]
         },
         { 
-            text: "Đang làm gì đó?", 
+            text: "Mô tả một buổi hẹn hò lý tưởng với bạn?", 
             sender: "bot", 
             options: [
-                { choice: "Đang nghĩ về anh", response: [{ text: "Ui chùi ui", sender: "bot" }], images: ["delilah"] },
-                { choice: "Đang nghe nhạc", response: [{ text: "Nghe KHÔNG QUÊ ĐÂU NHA phải hơm", sender: "bot" }], images: ["kimanh"] },
-                { choice: "Đang ngủ gục trên bàn", response: [{ text: "Sao vậy bé, mệt quá hỏ?", sender: "bot" }], images: ["bethien","thanhduysicrit"] },
-                { choice: "Chờ tin nhắn của anh nè", response: [{ text: "Ui chùi ui", sender: "bot" }], images: ["thanhduy"] }
+                { choice: "Một buổi hẹn hò ấm cúng và thoải mái, cùng nhau nấu ăn, sau đó ôm nhau trên sofa cùng xem một bộ phim cả hai cùng thích", response: [{ text: "Nghe có vẻ ấm áp gheeeegheeee", sender: "bot" }], images: ["thanhduysicrit", "thanhduy"] },
+                { choice: "Ngẫu hứng, không cần có kế hoạch trước, chỉ là làm những điều muốn làm cùng-với-nhau ", response: [
+                    { text: "Dữ z shao", sender: "bot" },
+                    { text: "Bất ngờ mới thú vị chớ", sender: "user" },
+                    { text: "Ờ hớ", sender: "bot" }
+                ], images: ["delilah", "thanhduy"] },
+                { choice: "Nhẹ nhàng, tình cảm, sâu sắc, lúc cả hai có thể chia sẻ, tâm sự với nhau ", response: [{ text: "Healing~", sender: "bot" }], images: ["bethien"] },
+                { choice: "Vô tư và vui nhộn, vibing trong từng khoảnh khắc ", response: [{ text: "Phải dui đúng không nè", sender: "bot" }], images: ["kimanh"] }
             ]
         },
         { 
-            text: "Mai em có rảnh không?", 
+            text: "Địa điểm hẹn hò bạn thích nhất?", 
             sender: "bot", 
             options: [
-                { choice: "Không anh", response: [
-                    { text: "Ơ hu hu", sender: "bot" },
-                    { text: "Em giỡn hoy, cóooo", sender: "user" },
-                    { text: "Hớt hồn hà", sender: "bot" }
-                ], images: ["delilah", "kimanh", "thanhduy"] },
-                { choice: "Anh tính rủ em đi đâu ọ?", response: [{ text: "Ừaaaaa", sender: "bot" }], images: ["thanhduysicrit", "bethien"] },
-                { choice: "Dạ tùy hì hì", response: [{ text: "Vậy là có nha!", sender: "bot" }], images: ["thanhduy"] },
-                { choice: "Đố anh biết em đang nghĩ gìiiiiiiiii?", response: [{ text: "Lá la lá la la lá là~", sender: "bot" }], images: ["kimanh"] }
+                { choice: "Công viên, đi dạo bờ hồ", images: ["bethien"] },
+                { choice: "Đi xập xình quẩy nhạc disco", response: [{ text: "Quẩy nhiệt lênnn", sender: "bot" }], images: ["delilah"] },
+                { choice: "Thủy cung, cùng nhau đi ngắm cá bơi", response: [{ text: "Glu glu glu", sender: "bot" }], images: ["thanhduy", "thanhduysicrit"] },
+                { choice: "Đi karaoke hát 300 bài bolero", response: [{ text: "Kim Anh ơi dĩ dãng đaooooo thươnggggg", sender: "bot" }], images: ["kimanh"] }
             ]
         },
-        
         { 
-            text: "Sáng mai em muốn đi đâu?", 
+            text: "Bạn muốn đi đâu vào ngày hẹn hò đầu tiên?", 
             sender: "bot", 
             options: [
-                { choice: "Đi mua tóc giả", response: [{ text: "Dữ hơm", sender: "bot" }], images: ["delilah", "kimanh"] },
-                { choice: "Đi cafe sáng", response: [{ text: "Okie luôn!", sender: "bot" }], images: ["thanhduysicrit"] },
-                { choice: "Đi hát karaoke", response: [{ text: "Mới sáng mà sung dị?!", sender: "bot" }], images: ["kimanh", "bethien"] },
-                { choice: "Đi dạo bờ hồ", response: [{ text: "Ỏ", sender: "bot" }], images: ["thanhduysicrit", "thanhduy"] },
-                { choice: "Đi săn mây", response: [
-                    { text: "Đây lên Đà Lạt 6 tiếng đó trời", sender: "bot" },
-                    { text: "Đi thiệt không anh qua đón", sender: "bot" }
-                ], images: ["bethien", "thanhduy"] }
+                { choice: "Ăn tối và đi cà phê ở nhà hàng có view thành phố", response: [{ text: "Sang choảnh hennnnnnn", sender: "bot" }], images: ["delilah"] },
+                { choice: "Đi xem kịch hoặc đi show nhạc ngoài trời", response: [{ text: "Đi Sol 8 hay đi Mây hỏ", sender: "bot" }], images: ["kimanh","thanhduysicrit"] },
+                { choice: "Đi công viên giải trí", response: [{ text: "Sẽ có cả bóng bay và kem nhỉ~", sender: "bot" }], images: ["bethien", "thanhduy"] },
+                { choice: "Dạo biển và ngắm hoàng hôn", response: [{ text: "Woaaa, siêu lãng mạn", sender: "bot" }], images: ["thanhduy"] }
+            ]
+        },
+        { 
+            text: "Bạn sẽ mặc gì trong buổi hẹn hò với người ta?", 
+            sender: "bot", 
+            options: [
+                { choice: "Không má nào chịu thua má nào, lộng lẫy lồng lộn nhất có thể", response: [{ text: "Slay and slay, she really loves to slay~", sender: "bot" }], images: ["delilah", "kimanh"] },
+                { choice: "Thoải mái, dễ thương, năng động", response: [{ text: "Ayyyo!", sender: "bot" }], images: ["bethien"] },
+                { choice: "Mở tủ ra thấy cái gì thì mặc cái đó", response: [{ text: "Như khui sícrit z", sender: "bot" }], images: ["kimanh"] },
+                { choice: "Lựa chọn trang phục phù hợp với địa điểm hẹn hò", response: [{ text: "Thì ra là dị", sender: "bot" }], images: ["thanhduysicrit", "thanhduy"] },
+            ]
+        },
+        { 
+            text: "Bạn là ai trong một nhóm bạn?", 
+            sender: "bot", 
+            options: [
+                { choice: "Người hoạt náo, luôn chủ động tổ chức mọi cuộc vui cho cả đám", response: [
+                    { text: "Những người bạn như z cần được bảo tồn", sender: "bot" },
+                    { text: "Chớ shaoooo", sender: "user" },
+                ], images: ["delilah", "thanhduy"] },
+                { choice: "Em bé, đáng iu, luôn được mọi người chiều chuộng", response: [{ text: "Ỏoooo", sender: "bot" }], images: ["bethien"] },
+                { choice: "Người dễ tính trong cuộc sống và khó tính, nghiêm túc, chỉn chu trong công việc", images: ["thanhduysicrit"] },
+                { choice: "Người vô tri, đầu óc bay trên mây trong những cuộc trò chuyện", response: [{ text: "HHò hó ho hò ho~", sender: "bot" }], images: ["kimanh"] }
+            ]
+        },
+        { 
+            text: "Một người như thế nào sẽ khiến bạn rung động?", 
+            sender: "bot", 
+            options: [
+                { choice: "Một người dễ chịu, luôn sẵn sàng hùa theo những trò đùa của bạn", images: ["kimanh"] },
+                { choice: "Một người tự do, can đảm, nhiệt thành", images: ["thanhduysicrit","thanhduy"] },
+                { choice: "Một người nhẹ nhàng, luôn vui tươi và mang năng lượng tích cực", images: ["bethien"] },
+                { choice: "Một người lúc nào cũng tỏa sáng trong lĩnh vực của họ", images: ["delilah"] }
             ]
         },
         { text: "Với cả", sender: "bot" },
         { 
-            text: "Sau đó thì shao, em muốn đi đâu nữa nà?", 
+            text: "Ngôn ngữ tình yêu của bạn là?", 
             sender: "bot", 
             options: [
-                { choice: "Đi Phú Quốc coi thủy cung", response: [{ text: "Anh cũng thích, let's gooo", sender: "bot" }], images: ["thanhduysicrit", "thanhduy"] },
-                { choice: "Massage chữa lành đi anh", response: [
-                    { text: "Ai, ai đã làm bé tổn thương???", sender: "bot" },
-                    { text: "Em đau mỏi vai gáy", sender: "user" },
-                    { text: "À...", sender: "bot" }
-                ], images: ["delilah", "thanhduy"] },
-                { choice: "Đi dạo", response: [{ text: "Dạo dạo quanh quanh nền cỏ xanh xanh~", sender: "bot" }], images: ["bethien"] },
-                { choice: "Nhắn ai đi dề miền đất phương nam", response: [{ text: "Gừng xanh mây trắng soi dòng Cửu Long giangggg", sender: "bot" }], images: ["kimanh"] }
-            ]
-        },
-            { text: "*Sau đây là một số câu hỏi, không phải từ người bạn ấy, nhưng là những điều bạn đang suy nghĩ*", sender: "bot" },
-        { 
-            text: "Love language của mình là gì nhỉ?", 
-            sender: "bot", 
-            options: [
-                { choice: "Lời nói yêu thương", images: ["bethien", "thanhduysicrit"] },
-                { choice: "Hành động chăm sóc", images: ["thanhduy", "kimanh"] },
+                { choice: "Nói lời khẳng định, bày tỏ yêu thương", images: ["delilah", "thanhduysicrit"] },
+                { choice: "Cử chỉ quan tâm", images: ["thanhduy", "bethien"] },
                 { choice: "Tặng quà", images: ["bethien"] },
-                { choice: "Ôm ấp", images: ["kimanh", "delilah"] },
-                { choice: "Dành thời gian chất lượng", images: ["all"] }
+                { choice: "Ôm ấp, nắm tay, skinship", images: ["kimanh", "delilah"] },
+                { choice: "Dành thời gian và sự chú tâm bên nhau", images: ["bethien, kimanh"] }
             ]
         },
         { 
-            text: "Đối với bạn, tình yêu là gì?", 
+            text: "Bạn sẽ mang quà gì cho người ấy trong một buổi hẹn hò?", 
             sender: "bot", 
             options: [
-                { choice: "Một hành trình tìm kiếm", images: ["thanhduy"] },
-                { choice: "Sự gắn bó", images: ["thanhduysicrit", "kimanh"] },
-                { choice: "Tình bạn diệu kỳ", images: ["bethien"]},
-                { choice: "Là Duy đó", images: ["delilah"] },
-                { choice: "Chỉ cần 1 khoảnh khắc", images: ["delilah"] }
+                { choice: "Bánh tráng/kẹo", images: ["bethien"] },
+                { choice: "Bánh quy tự làm", images: ["thanhduy"] },
+                { choice: "Trang phục/phụ kiện", images: ["delilah"] },
+                { choice: "Một bó hoa nhỏ", images: ["kimanh"] },
+                { choice: "Bất cứ thứ gì người ta cần/thích gần đây", images: ["thanhduysicrit"] }
             ]
         },
+        { text: "Ukie câu hỏi cuối nè ^3^", sender: "bot" },
         { 
-            text: "Nếu bạn đang crush ai đó, bạn sẽ làm gì lúc này?", 
+            text: "Bạn mong ước điều gì vào Valentine này?", 
             sender: "bot", 
             options: [
-                { choice: "Nếu đã thích anh rồi, em sẽ nói wo ai ni~~~", images: ["kimanh"] },
-                { choice: "Nhìn trộm từ xa", images: ["bethien","thanhduy"] },
-                { choice: "Thả thính nhẹ nhàng", images: ["thanhduysicrit"] },
-                { choice: "Giả bộ không quan tâm nhưng thực ra quan tâm lắm", images: ["delilah"] }
+                { choice: "Một ngày tràn ngập tình yêuuuu", images: ["thanhduy"] },
+                { choice: "Được tặng thật nhiều hoa và quà", images: ["bethien"] },
+                { choice: "Một ngày được yêu chiều bản thân", images: ["delilah"] },
+                { choice: "Ở bên cạnh người ấy là đủ", images: ["kimanh", "thanhduysicrit"] }
             ]
         },
-        { text: "Vậy nhaaaa, hẹn em ngày mai bình minh ló rạngg~", sender: "bot", options: [{ choice: "OK anh, ngủ ngon nhaaa" }] }
+        { text: "Hiểu gòi hiểu gòi nha, bây giờ bạn sẵn sàng xem kết quả chưa~", sender: "bot", options: [
+            { choice: "Rùi nha"},
+            { choice: "Từ từ khoan", response: [{ text: "Khum, ra kết quả luôn nè!", sender: "bot" }] },
+        ] }
     ];
     
     function startConversation() {
