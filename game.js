@@ -135,8 +135,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const messages = [
         { text: "*Valentine đến rùiiiii ~ Cùng FSL chơi một trò chơi nho nhỏ để tìm xem ai trong vũ trụ Thanh Duy sẽ là người thương của bạn dịp Lễ Tình nhân năm nay nhoaaaa ;\
-*", sender: "bot" },
-        { text: "Ting ting. Hãy cùng chúng mình trả lời những câu hỏi sau để tìm ra đáp án cuối cùng nhó ^3^", sender: "bot" },
+*", sender: "bot" , options: [
+    { choice: "Okieeeee "},
+    { choice: "Nghe hay á"},]
+},
+        { text: "Ting ting. Hãy cùng chúng mình trả lời những câu hỏi sau để tìm ra đáp án cuối cùng nhó ^3^", sender: "bot" options: [
+            { choice: "Mình sẵn sàng rồiiii"},
+            { choice: "Để coai mấy người làm trò gì" },]
+        },
         { 
             text: "Với bạn, thế nào là một tình yêu lý tưởng?", 
             sender: "bot", 
