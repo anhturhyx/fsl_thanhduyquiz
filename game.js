@@ -139,7 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
     { choice: "Okieeeee "},
     { choice: "Nghe hay á"},]
 },
-        { text: "Ting ting. Hãy cùng chúng mình trả lời những câu hỏi sau để tìm ra đáp án cuối cùng nhó ^3^", sender: "bot" options: [
+        { text: "Ting ting. Hãy cùng chúng mình trả lời những câu hỏi sau để tìm ra đáp án cuối cùng nhó ^3^", sender: "bot", options: [
             { choice: "Mình sẵn sàng rồiiii"},
             { choice: "Để coai mấy người làm trò gì" },]
         },
