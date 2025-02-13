@@ -146,7 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
             sender: "bot", 
             options: [
                 { choice: "Những rung động trong khoảnh khắc, đôi khi chỉ cần một ánh nhìn trìu mến ", images: ["thanhduy"] },
-                { choice: "Lòng tôi bối tối chân tôi đứng ngồi không yên, lơ ngơ giống một tên điên say mê giấc mơ giấc mộng", images: ["kimanh"] },
+                { choice: "Lòng tôi bối rối chân tôi đứng ngồi không yên, lơ ngơ giống một tên điên say mê giấc mơ giấc mộng", images: ["kimanh"] },
                 { choice: "Một bến đỗ bình yên, một người khiến mình cảm thấy an toàn và dễ chịu", images: ["bethien"]},
                 { choice: "Là [tên người đó]", images: ["thanhduysicrit"] },
                 { choice: "Những trải nghiệm thú vị, làm những điều mới mẻ, cùng nhau khám phá cuộc sống này ", images: ["delilah"] }
