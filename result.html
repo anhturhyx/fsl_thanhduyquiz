@@ -69,6 +69,16 @@
             const toggleMusicButton = document.getElementById("toggle-music");
             const musicLinkButton = document.getElementById("music-link");
             let isPlaying = false;
+            let audio;
+
+            // Map image to external music links
+            const musicMap = {
+                "images/delilah.jpg": "https://www.youtube.com/watch?v=CjMy7oiS7_4&ab_channel=ThanhDuyOfficial",
+                "images/bethien.jpg": "https://www.youtube.com/watch?v=o6SEe6clwUc&t=29s",
+                "images/thanhduy.jpg": "https://zingmp3.vn/bai-hat/Khong-Que-Dau-Nha-Thanh-Duy/Z8IB9ZAE.html",
+                "images/thanhduysicrit.jpg": "https://www.youtube.com/watch?v=oms_nHDALHc",
+                "images/kimanh.jpg": "https://www.youtube.com/watch?v=dNiwdb7lzQk"
+            };
 
             if (resultImage) {
                 resultImageElement.src = resultImage;
@@ -77,12 +87,16 @@
                 const fileName = resultImage.split('/').pop().split('.')[0];
                 const musicFile = `song/${fileName}.mp3`;
 
-                const audio = new Audio(musicFile);
-                audio.autoplay = true;
+                // Create audio element for local MP3 file
+                audio = new Audio(musicFile);
                 audio.loop = true;
 
-                musicLinkButton.onclick = () => window.open(musicFile, "_blank");
+                // Set external link for "Link nhạc"
+                if (musicMap[resultImage]) {
+                    musicLinkButton.onclick = () => window.open(musicMap[resultImage], "_blank");
+                }
 
+                // Handle play/stop toggle
                 toggleMusicButton.onclick = () => {
                     if (isPlaying) {
                         audio.pause();
@@ -93,6 +107,15 @@
                     }
                     isPlaying = !isPlaying;
                 };
+
+                // Attempt autoplay on first interaction
+                document.body.addEventListener("click", () => {
+                    if (!isPlaying) {
+                        audio.play().catch(() => console.log("Autoplay blocked"));
+                        isPlaying = true;
+                        toggleMusicButton.textContent = "⏸ Stop Music";
+                    }
+                }, { once: true });
             }
         });
     </script>
