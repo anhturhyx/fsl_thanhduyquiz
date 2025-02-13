@@ -228,7 +228,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 { choice: "Cử chỉ quan tâm", images: ["thanhduy", "bethien"] },
                 { choice: "Tặng quà", images: ["bethien"] },
                 { choice: "Ôm ấp, nắm tay, skinship", images: ["kimanh", "delilah"] },
-                { choice: "Dành thời gian và sự chú tâm bên nhau", images: ["bethien, kimanh"] }
+                { choice: "Dành thời gian và sự chú tâm bên nhau", images: ["kimanh"] }
             ]
         },
         { 
