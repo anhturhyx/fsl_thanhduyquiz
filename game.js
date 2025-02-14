@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function scrollToBottom() {
         setTimeout(() => {
-            chatBox.scrollTop = chatBox.scrollHeight;
+            chatBox.scrollTo({ top: chatBox.scrollHeight, behavior: "smooth" });
         }, 100);
     }
 
@@ -132,6 +132,20 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     }
+
+    const style = document.createElement("style");
+    style.textContent = `
+        .chat-box {
+            overflow-y: scroll;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+        .chat-box::-webkit-scrollbar {
+            display: none;
+        }
+    `;
+    document.head.appendChild(style);
+
 
     const messages = [
         { text: "*Valentine đến rùiiiii ~ Cùng FSL chơi một trò chơi nho nhỏ để tìm xem ai trong vũ trụ Thanh Duy sẽ là người thương của bạn dịp Lễ Tình nhân năm nay nhoaaaa ;\
