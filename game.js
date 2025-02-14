@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     chatContainer.appendChild(chatBox);
 
     const beepSound = new Audio('beep.mp3');
-    const choiceCounts = { delilah: 0, bethien: 0, thanhduysicrit: 0, kimanh: 0 };
+    const choiceCounts = { delilah: 0, bethien: 0, thanhduy:0, thanhduysicrit: 0, kimanh: 0 };
     let userInteracted = false;
 
     document.addEventListener("click", () => {
