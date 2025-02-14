@@ -219,7 +219,34 @@ document.addEventListener("DOMContentLoaded", () => {
                 { choice: "Một người lúc nào cũng tỏa sáng trong lĩnh vực của họ", images: ["delilah"] }
             ]
         },
-        { text: "Với cả", sender: "bot" },
+        {
+            "text": "Bạn sẽ làm gì khi crush một người?",
+            "sender": "bot",
+            "options": [
+                { 
+                    "choice": "Tỏ tình luôn (dù người ta chối từ cũng hong quê đâu nha)", 
+                    "response": [{ "text": "Trời ơi tự tin quá zậy!!!", "sender": "bot" }], 
+                    "images": ["thanhduy"] 
+                },
+                { 
+                    "choice": "Bật đèn xanh, thả thính nhẹ nhàng", 
+                    "response": [{ "text": "Ủa là đang thả thính ai chưa nèeee~", "sender": "bot" }], 
+                    "images": ["thanhduysicrit"] 
+                },
+                { 
+                    "choice": "Thích nhưng tỏ ra sang chảnh, vờ như không để ý tới người ta", 
+                    "response": [{ "text": "Làm giá ghê hông~~", "sender": "bot" }], 
+                    "images": ["delilah"] 
+                },
+                { 
+                    "choice": "Âm thầm quan tâm", 
+                    "response": [{ "text": "Biết đâu người ta cũng để ý đóooo", "sender": "bot" }], 
+                    "images": ["bethien"] 
+                }
+            ]
+        },
+        
+        {   text: "Còn vài câu nữa thoiiiii", sender: "bot" },
         { 
             text: "Ngôn ngữ tình yêu của bạn là?", 
             sender: "bot", 
